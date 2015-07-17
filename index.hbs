@@ -123,13 +123,23 @@
         {{/foreach posts}}
 
           <nav class="demo-nav mdl-cell mdl-cell--12-col">
+            {{#if prev}}
+            <a href="{{page_url prev}}" class="demo-nav__button">
+              More
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons">arrow_backward</i>
+              </button>
+            </a>
+            {{/if}}
             <div class="section-spacer"></div>
-            <a href="entry.html" class="demo-nav__button">
+            {{#if next}}
+            <a href="{{page_url next}}" class="demo-nav__button">
               More
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons">arrow_forward</i>
               </button>
             </a>
+            {{/if}}
           </nav>
         </div>
         <footer class="mdl-mini-footer">
